@@ -9,7 +9,6 @@ import time
 import asyncio
 import io
 import subprocess
-from telethon import events
 from telethon.errors import MessageEmptyError, MessageTooLongError, MessageNotModifiedError
 from userbot import bot, CMD_HELP
 from userbot.events import register
