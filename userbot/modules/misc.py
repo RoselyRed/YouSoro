@@ -77,21 +77,6 @@ async def reedme(e):
         "\n[Setup Guide - LastFM Module](https://telegra.ph/How-to-set-up-LastFM-module-for-Paperplane-userbot-11-02)"
 
 
-# Copyright (c) Gegham Zakaryan | 2019
-@register(outgoing=True, pattern="^.repeat (.*)")
-async def repeat(rep):
-    cnt, txt = rep.pattern_match.group(1).split(' ', 1)
-    replyCount = int(cnt)
-    toBeRepeated = txt
-
-    replyText = toBeRepeated + "\n"
-
-    for i in range(0, replyCount - 1):
-        replyText += toBeRepeated + "\n"
-
-    await rep.edit(replyText)
-
-
 @register(outgoing=True, pattern="^.repo$")
 async def repo_is_here(wannasee):
     """ For .repo command, just returns the repo URL. """
@@ -139,10 +124,7 @@ CMD_HELP.update({
     "\nUsage: Github Repo of this bot",
     "readme":
     ">`.readme`"
-    "\nUsage: Provide links to setup the userbot and it's modules.",
-    "repeat":
-    ">`.repeat <no> <text>`"
-    "\nUsage: Repeats the text for a number of times. Don't confuse this with spam tho.",
+    "\nUsage: Provide links to setup the userbot and it's modules.", 
     "restart":
     ">`.restart`"
     "\nUsage: Restarts the bot !!",
