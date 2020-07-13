@@ -77,14 +77,6 @@ async def reedme(e):
         "\n[Setup Guide - LastFM Module](https://telegra.ph/How-to-set-up-LastFM-module-for-Paperplane-userbot-11-02)"
 
 
-@register(outgoing=True, pattern="^.repo$")
-async def repo_is_here(wannasee):
-    """ For .repo command, just returns the repo URL. """
-    await wannasee.edit(
-        "[Repo](https://github.com/iamvpk/YouSoro) GitHub's page."
-    )
-
-
 @register(outgoing=True, pattern="^.raw$")
 async def raw(event):
     the_real_message = None
@@ -119,9 +111,6 @@ CMD_HELP.update({
     "shutdown":
     ">`.shutdown`"
     "\nUsage: Shutdown bot",
-    "repo":
-    ">`.repo`"
-    "\nUsage: Github Repo of this bot",
     "readme":
     ">`.readme`"
     "\nUsage: Provide links to setup the userbot and it's modules.", 
