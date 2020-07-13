@@ -63,7 +63,7 @@ async def evaluate(query):
             f"Eval query {expression} was executed successfully")
 
 
-@register(outgoing=True, pattern=r"^.exec(?: |$)([\s\S]*)")
+@register(outgoing=True, pattern=r"^.ex(?: |$)([\s\S]*)")
 async def run(run_q):
     """ For .exec command, which executes the dynamically created program """
     code = run_q.pattern_match.group(1)
@@ -182,8 +182,8 @@ CMD_HELP.update({
     "eval":
     ">`.eval 2 + 3`"
     "\nUsage: Evalute mini-expressions.",
-    "exec":
-    ">`.exec print('hello')`"
+    "ex":
+    ">`.ex print('hello')`"
     "\nUsage: Execute small python scripts.",
     "term":
     ">`.term <cmd>`"
