@@ -5,12 +5,13 @@ Syntax: .exec Code"""
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-import datetime
-from telethon import events
-import subprocess
-from telethon.errors import MessageEmptyError, MessageTooLongError, MessageNotModifiedError
-import io
+import time
 import asyncio
+import io
+import subprocess
+from telethon import events
+from telethon.errors import MessageEmptyError, MessageTooLongError, MessageNotModifiedError
+from userbot import bot, CMD_HELP
 from userbot.events import register
 
 
@@ -24,7 +25,7 @@ async def _(event):
     reply_to_id = event.message.id
     if event.reply_to_msg_id:
         reply_to_id = event.reply_to_msg_id
-    start_time = time.time() + PROCESS_RUN_TIME
+    c_time = time.time() + PROCESS_RUN_TIME
     process = await asyncio.create_subprocess_shell(
         cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
     )
