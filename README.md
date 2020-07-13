@@ -45,8 +45,7 @@ Run the UserBot once you have a valid configuration file.
 ```sh
 $ python3 -m userbot
 ```
-
-
+<p align="center">&nbsp;</p>
 <h2 align="center">Setting up Google Drive</h2>
 <p align="center"><a href="https://telegra.ph/SET-UP-GOOGLE-DRIVE-07-13">README</a></p>
 <p align="center">&nbsp;</p>
