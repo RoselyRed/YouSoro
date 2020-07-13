@@ -65,9 +65,9 @@ RUN python3 -m ensurepip \
 #
 # Clone repo and prepare working directory
 #
-RUN git clone -b master https://github.com/iamvpk/YouSoro /YouSoro/
-RUN mkdir /YouSoro/bin/
-WORKDIR /YouSoro/
+RUN git clone -b master https://github.com/iamvpk/YouSoro /home/YouSoro/
+RUN mkdir /home/YouSoro/bin/
+WORKDIR /home/YouSoro/
 
 #
 # Install requirements
